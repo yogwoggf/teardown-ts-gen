@@ -27,5 +27,5 @@ jobs:
                   git config --global user.name "GitHub Actions"
                   git config --global user.email ""
                   git add teardown.d.ts
-                  git diff-index --quiet HEAD || git commit -m 'bla' || git commit -a -m "Update declarations" && git push -u origin decgen
+                  git diff-index --quiet HEAD || git commit -a -m "Update declarations" && git push -u origin decgen
 
