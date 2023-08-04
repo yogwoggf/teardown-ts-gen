@@ -18,7 +18,7 @@ jobs:
               run: |
                   cp teardown.d.ts /tmp/teardown.d.ts
                   git checkout -b decgen
-                  git rm -r *
+                  git rm -r '*'
                   cp /tmp/teardown.d.ts .
                   git config --global user.name "GitHub Actions"
                   git config --global user.email ""
