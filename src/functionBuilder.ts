@@ -6,6 +6,8 @@ function convertTypeToLua(type: string) {
 			return "LuaTable";
 		case "bool":
 			return "boolean";
+		case "int":
+		case "value":
 		case "float":
 			return "number";
 		case "varying":
