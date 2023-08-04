@@ -20,12 +20,12 @@ jobs:
               run: |
                   cp teardown.d.ts /tmp/teardown.d.ts
                   git pull
-                  git checkout -b decgen
+                  git checkout decgen
                   git rm -r '*'
                   cp /tmp/teardown.d.ts .
                   git config --global user.name "GitHub Actions"
                   git config --global user.email ""
                   git add teardown.d.ts
                   git commit -m "Update declarations"
-                  git push -u origin decgen
+                  git push -f -u origin decgen
 
