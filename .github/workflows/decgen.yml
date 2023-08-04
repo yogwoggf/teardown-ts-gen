@@ -1,5 +1,7 @@
 name: Declaration Generation
 on: [push, workflow_dispatch]
+permissions:
+    contents: write
 
 jobs:
     build:
