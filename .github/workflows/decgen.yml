@@ -1,0 +1,25 @@
+name: Declaration Generation
+on: [push, workflow_dispatch]
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - name: Setup Node
+              uses: actions/setup-node@v3
+              with:
+                  node-version-file: ".nvmrc"
+            - name: Install Dependencies
+              run: npm install
+            - name: Generate Declarations
+              run: npm run build
+            - name: Push to decgen branch
+              run: |
+                  git checkout -b decgen
+                  git config --global user.name "GitHub Actions"
+                  git config --global user.email "
+                  git add teardown.d.ts
+                  git commit -m "Update declarations"
+                  git push -u origin decgen
+
