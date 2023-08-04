@@ -19,6 +19,7 @@ jobs:
             - name: Push to decgen branch
               run: |
                   cp teardown.d.ts /tmp/teardown.d.ts
+                  git pull
                   git checkout -b decgen
                   git rm -r '*'
                   cp /tmp/teardown.d.ts .
