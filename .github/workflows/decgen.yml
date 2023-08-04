@@ -25,6 +25,8 @@ jobs:
                   git config --global user.name "GitHub Actions"
                   git config --global user.email ""
                   git add teardown.d.ts
+                  git status
+                  ls
                   git commit -m "Update declarations"
                   git push -f -u origin decgen
 
